@@ -1,8 +1,3 @@
-$(function(){
-
-  navigateTo();
-  changeStudent(studentCall);
-})
 
 function navigateTo(){
   $("#toAbout").click(function(){
