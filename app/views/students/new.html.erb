@@ -5,22 +5,22 @@
 <button class="hidden" id="retry">Try Again?</button>
 <button class="hidden" id="giveup">Go Back?</button>
 <div id="add-student" class="hidden">
-<h1>Make Your Profile!</h1>	
+<h4>Make Your Profile!</h4>
 	<%= form_for @student do |f| %>
 	<%= f.label :name %>
-	<%= f.text_field :name %>
+	<%= f.text_field :name, :placeholder => "Remy leRouge" %>
 	<%= f.label :email %>
-	<%= f.email_field :email %>
+	<%= f.email_field :email, :placeholder => "remy@schmee.com" %>
 	<%= f.label :website %>
-	<%= f.text_field :website %>
+	<%= f.text_field :website, :placeholder => "http://tunr.io.ly"%>
 	<%= f.label :github, "Github username" %>
-	<%= f.text_field :github %>
-	<%= f.label :twitter %>
-	<%= f.text_field :twitter %>
-	<%= f.label :linkedin %>
-	<%= f.text_field :linkedin %>
+	<%= f.text_field :github, :placeholder => "remydog" %>
+	<%= f.label :twitter, "Twitter URL" %>
+	<%= f.text_field :twitter, :placeholder => "http://twitter.com/remylerouge" %>
 	<%= f.label :blurb %>
 	<%= f.text_field :blurb %>
+	<%= f.label :picture %>
+	<%= f.text_field :picture%>
 	<%= f.submit %>
 	<% end %>
 </div>

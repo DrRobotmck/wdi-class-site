@@ -8,11 +8,26 @@
 
 .get_student:hover {
   cursor: pointer;
+  font-style: italic;
 }
 
 .shout {
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
+}
+
+.name {
+  font-family: 'Roboto Slab', serif;
+  margin-top: 2em;
+  text-align: left;
+  font-style: italic;
+
+}
+.blurb {
+  margin-top: .5em;
+  font-size: 1.2em;
+  text-align: left;
+  line-height: 1.3em;
 }
 
 p {
@@ -23,11 +38,54 @@ p {
   line-height: 1.3em;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: crimson;
+}
+
+.contact {
+  display: inline-block;
+  font-family: 'Roboto Slab', serif;
+  background-color: firebrick;
+  padding: .8em;
+  margin: 2em .2em 0;
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.contact:hover {
+  color: goldenrod;
+}
+
+#buttons li {
+  list-style: none;
+}
+
+.tiny {
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  font-size: 1em;
+  margin-top: 0px;
+}
+
+.tiny a{
+  color: darkturquoise;
+  text-decoration: none;
+}
+
+.tiny a:hover {
+  color: crimson;
+}
 
 /*SECTIONS*/
 
 #landing {
-  background: url(general-assembly-real2.jpg);
+  background: url(http://www.dreamboxphotography.com/images/general-assembly-real2.jpg);
   background-size: cover;
 }
 
@@ -41,14 +99,16 @@ p {
 }
 
 #ga {
-  background-color: firebrick;
+  background-color: darkturquoise;
+  text-align: center;
 }
 
 .trio-case {
-  width: 80%;
+  width: 70%;
   height: 60%;
   margin: 0 auto;
   text-align: center;
+  border: 1px solid pink;
 }
 
 section {
@@ -56,20 +116,33 @@ section {
 }
 
 #student-page {
-  width: 60%;
+  width: 70%;
   height: 500px;
-  border: 2px solid black;
-  margin: 0 auto;
-
+  margin: 3em auto;
+  padding-top: 1em;
 }
 
-.trio {
+#student-names:first-child {
+  margin: 0 auto;
+}
+
+#buttons {
+  margin-top: -20px;
   display: inline-block;
+  width: 50%;
+  text-align: right;
+  float: left;
+}
+
+
+.trio {
   width: 25%;
-  height: 100%;
+  height: 70%;
+  min-height: 520px;
   border-radius: 50px;
-  margin: 2em 2em 1em;
   background-color: white;
+  margin-top: 1em;
+  text-align: center;
 }
 
 .arrow {
@@ -77,6 +150,18 @@ section {
   margin: 3em auto;
 }
 
+.most {
+  height: 82%;
+}
+
+#footer {
+  padding-top: 1.3em;
+  bottom: 0;
+  clear: both;
+  background-color: white;
+  height: 18%;
+  color: white;
+}
 /*HEADERS*/
 
 .banner h1 {
@@ -106,6 +191,7 @@ h3 {
   text-align: center;
   font-size: 4em;
   padding-top: 1em;
+  margin-bottom: .5em;
 }
 
 h4 {
@@ -113,6 +199,27 @@ h4 {
   color: firebrick;
   padding: 1em;
   font-size: 2em;
+}
+
+h5 {
+  display: inline-block;
+  font-family: 'Roboto Slab', serif;
+  background-color: white;
+  color: darkturquoise;
+  border-radius: 15px 0 15px 0;
+  padding: 1em;
+  font-size: 1.3em;
+  margin-top: 1em;
+}
+
+h5 a {
+  color: darkturquoise;
+  text-decoration: none;
+}
+
+h5 a:hover {
+  color: crimson;
+  transition: all .7s ease;
 }
 
 /*NAV*/
@@ -175,18 +282,59 @@ nav li:hover {
 
 .photo {
   border-radius: 50%;
+  width: 300px;
   float: left;
+  padding-right: 30px;
 }
 
 /*STUDENT FORM*/
 #add-student{
-  margin-top: 5em;
-  width: 10em;
-  height: 16em; 
+  margin: 3em auto;
+  height: 16em;
+  text-align: center;
 }
 .hidden{
   display:none;
 }
 #warning{
   margin-top: 3em;
+}
+
+form {
+    display: block;
+    font-size:11px;
+    width: 300px;
+    margin: 2em auto 0;
+}
+label {
+  float: left;
+  margin: 1em 1em 0;
+  clear: both;
+  font-family: 'Roboto Slab', serif;
+}
+
+textarea {
+  float: right;
+  margin: .2em auto;
+  border-radius: 5px;
+  border: 2px solid black;
+  height: 5em;
+  width: 15em;
+}
+
+input {
+  float: right;
+  margin: .2em auto;
+  border-radius: 5px;
+  border: 2px solid black;
+  height: 2em;
+  width: 15em;
+}
+
+input[type="submit"] {
+  clear: both;
+}
+
+input[type="submit"]:hover {
+  background-color: firebrick;
 }

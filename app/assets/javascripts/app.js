@@ -22,11 +22,25 @@ function studentCall(student){
   var studentInfo = student;
 
   var list = $("#student-info");
-  var github= $("<li>").html($("<a>").text("github").attr("href", "http://github.com/" + student.github));
-  var email = $("<li>").html($("<a>").text("email").attr("href", "mailto:" + student.email));
-  var website = $("<li>").html($("<a>").text("website").attr("href", student.website));
-  var picture = $("<img>").attr({src: "/assets/" + student.picture, class: "photo"});
-  list.empty().append(github).append(email).append(website).append(picture);
+  var buttons = $("#buttons");
+  var name = $("<p>").text(student.name).attr("class", "name");
+  var github= $("<li>").html($("<a>").text("github").attr({href: "http://github.com/" + student.github, class: "contact"}));
+  var email = $("<li>").html($("<a>").text("email").attr({href: "mailto:" + student.email, class: "contact"}));
+  var picture = $("<img>").attr({src: student.picture, class: "photo"});
+  var blurb = $("<p>").text(student.blurb).attr("class", "blurb");
+  var twitter = $("<li>").html($("<a>").text("twitter").attr({href: student.twitter, class: "contact"}));
+  list.empty();
+  buttons.empty();
+  if(student.website) {
+    var website = $("<li>").html($("<a>").text("website").attr({href: student.website, class: "contact"}));
+    buttons.append(website);
+  }
+  if(student.twitter) {
+    var website = $("<li>").html($("<a>").text("twitter").attr({href: student.twitter, class: "contact"}));
+    buttons.append(twitter);
+  }
+  list.empty().append(picture).append(name).append(blurb);
+  buttons.append(github).append(email);
 
 
 }
